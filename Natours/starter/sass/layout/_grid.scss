@@ -1,0 +1,41 @@
+.row {
+    max-width: $grid-width;
+    margin: 0 auto;
+    @include clearfix;
+
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    }
+
+    [class^="col-"] {
+        float: left;
+
+        &:not(:last-child) {
+            margin-right: $gutter-horizontal;
+        }
+    }
+
+    .col-1-of-2 {
+        width: calculate-grid-content-width(2, 1);
+    }
+
+    .col-1-of-3 {
+        width: calculate-grid-content-width(3, 1);
+    }
+
+    .col-2-of-3 {
+        width: calculate-grid-content-width(3, 2);
+    }
+
+    .col-1-of-4 {
+        width: calculate-grid-content-width(4, 1);
+    }
+
+    .col-2-of-4 {
+        width: calculate-grid-content-width(4, 2);
+    }
+    
+    .col-3-of-4 {
+        width: calculate-grid-content-width(4, 3);
+    }    
+}
