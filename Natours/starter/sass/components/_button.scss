@@ -51,6 +51,15 @@
             background-color: $color-dirty-white;
         }
     }
+
+    &--green {
+        background-color: $color-primary;
+        color: $color-dirty-white;
+
+        &::after {
+            background-color: $color-primary;
+        }
+    }    
 }
 
 .button-text {
